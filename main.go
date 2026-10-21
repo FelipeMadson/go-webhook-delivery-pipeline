@@ -56,7 +56,7 @@ func main() {
 	payload := WebhookPayload{
 		ID:        "evt-001",
 		TargetURL: "https://api.partner.io/webhooks",
-		Data:      []byte("{"event":"payment.confirmed"}"),
+		Data:      []byte(`{"event":"payment.confirmed"}`),
 		Attempt:   0,
 	}
 	signature := pipeline.SignPayload(payload.Data)
